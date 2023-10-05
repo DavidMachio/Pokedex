@@ -1,0 +1,10 @@
+footer {
+  color: gray;
+  background-color: rgba(255, 255, 255, 0.674);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3vh;
+  width: 100vw;
+  position: fixed;
+}

@@ -1,0 +1,23 @@
+:root {
+  --primary: rgb(224, 224, 224);
+  --secondary: rgb(29, 29, 29);
+  --tertiary: rgb(255, 206, 49);
+  --fourth: rgb(0, 30, 130);
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: var(--secondary);
+}

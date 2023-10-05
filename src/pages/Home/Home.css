@@ -1,0 +1,59 @@
+.home {
+  min-height: 92vh;
+  width: auto;
+}
+
+.fotofondo {
+  position: fixed;
+  left: 0px;
+  height: 100%;
+  width: 110%;
+  object-fit: cover;
+  top: 0;
+  z-index: -10;
+  opacity: 70%;
+  filter: blur(10px);
+}
+.name {
+  width: 100%;
+  position: absolute;
+  z-index: -50;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 15vw;
+  color: rgba(0, 0, 0, 0.737);
+}
+.pokemondate {
+  height: 92vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.passpokemon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  gap: 80px;
+}
+.buttonpass {
+  font-size: 60px;
+  color: rgb(147, 147, 147);
+  background-color: transparent;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+.buttonpass:hover {
+  color: rgb(0, 0, 0);
+}
+.type {
+  text-transform: uppercase;
+  text-align: center;
+}
+.pokemon {
+  height: 600px;
+  filter: blur(1px);
+}
