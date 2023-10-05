@@ -35,13 +35,17 @@ useEffect(() => {
         value={inputValue}
         onInput={(ev) => setInputValue(ev.target.value)}/>
       </div>
-     {!error ? (<p>hola</p>) : (
+     {!error ? (<p>lo sentimos, prueba otra busqueda</p>) : (
        <div className="pokemoncard">
-        {inputValue == "" ? <h3>nada</h3> : <img className="imgpokemon" src={pokemons.sprites?.other.home.front_default} alt={pokemons.name} />}
+        {inputValue == "" ? <p>¿Que Pokemon quieres buscar?</p> : 
+        <>
+        <img className="imgpokemon" src={pokemons.sprites?.other.home.front_default} alt={pokemons.name} />
+        
        <h3 className="pokemonsname">{pokemons.name}</h3>
        <h3 className="weight">Weight: {pokemons.weight / 10} Kg</h3>
        <h3 className="order">Position: {pokemons.order}</h3>
        <h3 className="id">Id:{pokemons.id}</h3>
+       </>}
    </div>
      )}
     </main>

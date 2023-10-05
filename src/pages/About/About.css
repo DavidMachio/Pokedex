@@ -1,0 +1,23 @@
+.about {
+  max-height: 92vh;
+  width: auto;
+}
+.about > img {
+  height: 92vh;
+  width: 100%;
+  object-fit: cover;
+}
+.aboutext {
+  width: 350px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+.logopokedex {
+  height: 70px;
+  padding: 10px;
+}
+.aboutext > p {
+  text-align: justify;
+  font-size: 15px;
+}
