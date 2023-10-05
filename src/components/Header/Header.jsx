@@ -1,4 +1,5 @@
 import "./Header.css"
+import { NavLink } from "react-router-dom";
 
 const Header = ({logo, logoAlt, links}) => {
   return (
@@ -11,7 +12,7 @@ const Header = ({logo, logoAlt, links}) => {
         <ul>
           {links.map((link) => (
           <li key={link.name}>
-            <a href={link.link}>{link.name}</a>
+            <NavLink to={link.link}>{link.name}</NavLink>
           </li>))}
         </ul>
       </nav>

@@ -3,16 +3,23 @@ import { useState, useEffect } from "react";
 import { useDebounce } from "use-debounce"
 const Pokedex = () => {
 
-const[inputValue, setInputValue] = useState("pikachu");
+const[inputValue, setInputValue] = useState("");
 const [pokemons, setPokemons] = useState({});
 const[value] = useDebounce(inputValue, 700);
-const[loaded, setLoaded] = useState(false)
+const [error, setError] = useState(false);
 
 const searchPokemon = async () => {
-  const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${value}`);
+  //trycach
+  setError(false)
+  try{
+    const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${value}`);
   const dataJSON = await data.json();
   setPokemons(dataJSON)
   setLoaded(true)
+  } catch (error) {
+    setError(true)
+  }
+  //hasta aqui
 };
 
 useEffect(() => {
@@ -28,9 +35,9 @@ useEffect(() => {
         value={inputValue}
         onInput={(ev) => setInputValue(ev.target.value)}/>
       </div>
-     {!loaded ? (<p>hola</p>) : (
+     {!error ? (<p>hola</p>) : (
        <div className="pokemoncard">
-        {inputValue == "" ? <h3>nada</h3> : <img className="imgpokemon" src={pokemons.sprites.other.home.front_default} alt={pokemons.name} />}
+        {inputValue == "" ? <h3>nada</h3> : <img className="imgpokemon" src={pokemons.sprites?.other.home.front_default} alt={pokemons.name} />}
        <h3 className="pokemonsname">{pokemons.name}</h3>
        <h3 className="weight">Weight: {pokemons.weight / 10} Kg</h3>
        <h3 className="order">Position: {pokemons.order}</h3>

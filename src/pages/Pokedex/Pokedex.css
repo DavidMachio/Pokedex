@@ -12,7 +12,6 @@
 .pokedex {
   height: 92vh;
   width: auto;
-  border: 2px solid red;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -53,6 +52,7 @@
 }
 .imgpokemon {
   height: 400px;
+  width: auto;
 }
 .pokemonsname {
   font-size: 50px;
